@@ -1,3 +1,3 @@
 # cssMemSlider
 
-## deniswilk.github.io/cssMemSlider/cssMemSlider/
+## https://deniswilk.github.io/cssMemSlider/cssMemSlider/index.html
