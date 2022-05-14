@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cssMemSlider</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <input type="radio" name="controls" id="radio1" class="radio" checked>
+        <input type="radio" name="controls" id="radio2" class="radio">
+        <input type="radio" name="controls" id="radio3" class="radio">
+        <input type="radio" name="controls" id="radio4" class="radio">
+        <input type="radio" name="controls" id="radio5" class="radio">
+        <div class="img-container">
+            <img class="img" id="img1" src="assets/images/1.jpg" alt="meme-image">
+            <img class="img" id="img2" src="assets/images/2.jpg" alt="meme-image">
+            <img class="img" id="img3" src="assets/images/3.jpg" alt="meme-image">
+            <img class="img" id="img4" src="assets/images/1.jpg" alt="meme-image">
+            <img class="img" id="img5" src="assets/images/1.jpg" alt="meme-image">
+        </div>
+        <div class="under-img-container">
+            <div class="captions-container">
+                <div class="caption caption5">image 5</div>
+                <div class="caption caption4">image 4</div>
+                <div class="caption caption3">image 3</div>
+                <div class="caption caption2">image 2</div>
+                <div class="caption caption1">image 1</div>
+            </div>
+            <div class="controls-container">
+                <label class="control control1" for="radio1">
+                    <div class="btn btn1"></div>
+                </label>
+                <label class="control control2" for="radio2">
+                    <div class="btn btn2"></div>
+                </label>
+                <label class="control control3" for="radio3">
+                    <div class="btn btn3"></div>
+                </label>
+                <label class="control control4" for="radio4">
+                    <div class="btn btn4"></div>
+                </label>
+                <label class="control control5" for="radio5">
+                    <div class="btn btn5"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
