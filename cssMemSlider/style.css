@@ -1,3 +1,7 @@
+html {
+    overflow: hidden;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -10,9 +14,15 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    max-width: 95vw;
+    max-height: 95vh;
     width: max-content;
     height: max-content;
+    background-color: rgb(95, 95, 95);
+    border: solid rgb(95, 95, 95) .5rem;
+    border-radius: .5rem;
 }
 
 .radio {
@@ -24,7 +34,10 @@ body {
     justify-content: start;
     align-items: center;
     overflow: hidden;
-    width: 44rem;
+    max-width: 100%;
+    width: 50rem;
+    border: solid transparent;
+    border-radius: .5rem;
 }
 
 .img {
@@ -36,7 +49,8 @@ body {
 .under-img-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    max-width: 100%;
 }
 
 .captions-container {
@@ -44,20 +58,21 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     width: 33rem;
-    height: 3rem;
+    height: 4rem;
     overflow: hidden;
 }
 
 .caption {
     min-width: 100%;
     font-size: 2rem;
-    color: rgb(255, 255, 255);  
+    color: #fafafa;  
     opacity: 0; 
 }
 
 .controls-container {
     display: flex;
     align-items: center;
+    height: 4rem;
 } 
 
 .control {
@@ -70,18 +85,27 @@ body {
 }
 
 .control:hover .btn {
-    background-color: rgb(3, 181, 212);
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    background-color: rgba(3, 181, 212, 0.279);
+    border: solid rgb(171, 171, 171);
 }
 
 .control:active .btn {
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    background-color: rgb(3, 181, 212);
     background-color: rgb(210, 217, 217);
+    box-shadow: 0 .05rem .25rem .1rem silver;
+    transform: scale(1);
 }
 
 .btn {
     width: 1.25rem;
     height: 1.25rem;
-    background-color: aliceblue;
-    border: solid grey;
+    background-color: #fafafa;
+    border: solid rgb(95, 95, 95);
     border-radius: .3rem;
 }
 
@@ -156,8 +180,11 @@ input#radio5:checked ~ .under-img-container > .captions-container > .caption5 {
 }
 
 input#radio1:checked ~ .under-img-container > .controls-container > .control > .btn1 {
-    background-color: rgb(113, 113, 113);
-    cursor:default
+    cursor: default;
+    transition: .5s;
+    background-color: rgb(3, 181, 212);
+    border: solid #fafafa;
+    box-shadow: none;
 }
 
 input#radio1:checked ~ .under-img-container > .controls-container > .control1 {
@@ -165,7 +192,11 @@ input#radio1:checked ~ .under-img-container > .controls-container > .control1 {
 }
 
 input#radio2:checked ~ .under-img-container > .controls-container > .control > .btn2 {
-    background-color: rgb(113, 113, 113);
+    cursor: default;
+    transition: .5s;
+    background-color: rgb(3, 181, 212);
+    border: solid #fafafa;
+    box-shadow: none;
 }
 
 input#radio2:checked ~ .under-img-container > .controls-container > .control2 {
@@ -173,7 +204,11 @@ input#radio2:checked ~ .under-img-container > .controls-container > .control2 {
 }
 
 input#radio3:checked ~ .under-img-container > .controls-container > .control > .btn3 {
-    background-color: rgb(113, 113, 113);
+    cursor: default;
+    transition: .5s;
+    background-color: rgb(3, 181, 212);
+    border: solid #fafafa;
+    box-shadow: none;
 }
 
 input#radio3:checked ~ .under-img-container > .controls-container > .control3 {
@@ -181,7 +216,11 @@ input#radio3:checked ~ .under-img-container > .controls-container > .control3 {
 }
 
 input#radio4:checked ~ .under-img-container > .controls-container > .control > .btn4 {
-    background-color: rgb(113, 113, 113);
+    cursor: default;
+    transition: .5s;
+    background-color: rgb(3, 181, 212);
+    border: solid #fafafa;
+    box-shadow: none;
 }
 
 input#radio4:checked ~ .under-img-container > .controls-container > .control4 {
@@ -189,7 +228,11 @@ input#radio4:checked ~ .under-img-container > .controls-container > .control4 {
 }
 
 input#radio5:checked ~ .under-img-container > .controls-container > .control > .btn5 {
-    background-color: rgb(113, 113, 113);
+    cursor: default;
+    transition: .5s;
+    background-color: rgb(3, 181, 212);
+    border: solid #fafafa;
+    box-shadow: none;
 }
 
 input#radio5:checked ~ .under-img-container > .controls-container > .control5 {
@@ -198,10 +241,18 @@ input#radio5:checked ~ .under-img-container > .controls-container > .control5 {
 
 @media (max-width: 480px) {
 
+    .container {
+        max-width: 95%;
+        border: solid rgb(97, 97, 97) .3rem;
+    }
+
     .under-img-container {
         flex-direction: column-reverse;
         align-items: center;
-        gap: 1rem;
+    }
+
+    .captions-container {
+        max-width: 100%;
     }
 
     .caption {
