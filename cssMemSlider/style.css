@@ -93,10 +93,10 @@ body {
 }
 
 .control:active .btn {
+    transition-property: background-color;
     transition-duration: .3s;
     transition-timing-function: ease-out;
     background-color: rgb(3, 181, 212);
-    background-color: rgb(210, 217, 217);
     box-shadow: 0 .05rem .25rem .1rem silver;
     transform: scale(1);
 }
